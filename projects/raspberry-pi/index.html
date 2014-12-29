@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            
+                DJT &mdash; Natural-born world-shaker
+            
+        </title>
+
+        
+            <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+        
+
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/images/twf.png"/>
+        <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="DJT" />
+
+        <meta name="title" content="DJT">
+        <link rel="canonical" href="http://dtredger.github.io//projects/raspberry-pi/">
+
+        
+
+        
+
+        <meta property="og:title" content="DJT"/>
+        <meta property="og:url" content="http://dtredger.github.io//projects/raspberry-pi/"/>
+
+        
+
+        
+
+        <meta property="og:site_name" content="DJT">
+
+
+    </head>
+
+    <body>
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T937ZS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T937ZS');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <section class="site-nav">
+            <header>
+                <nav id="navigation">
+                    <a class="brand" href="/">
+                        <img src="/images/twf.png" alt="Inc">
+                    </a>
+
+
+                    <!-- Rails -->
+                    <a href="/projects/rails">
+                        <div class="navlink">
+                            Rails
+                        </div>
+                    </a>
+
+                    <!-- Angular -->
+                    <a href="/projects/angular">
+                        <div class="navlink">
+                            Angular
+                        </div>
+                    </a>
+
+                    <!-- Raspberry Pi -->
+                    <a href="/projects/raspberry-pi">
+                        <div class="navlink">
+                            Raspberry Pi
+                        </div>
+                    </a>
+
+                    <!-- Projects -->
+<!--                     <a href="/projects/projects">
+                        <div class="navlink">
+                            Misc. Projects
+                        </div>
+                    </a> -->
+
+
+                    <!--blog posts -- there are none :( -->
+                    <!--<a href="/projects/blog">-->
+                        <!--<div class="navlink">-->
+                            <!--Posts-->
+                        <!--</div>-->
+                    <!--</a>-->
+
+                    <!--misc. things like ads and paper-stuff? -->
+<!--                     <a href="/projects/misc">
+                        <div class="navlink">
+                            Misc.
+                        </div>
+                    </a> -->
+
+                </nav>
+
+                
+            </header>
+        </section>
+            <div class="dark">
+  <div class="padded">
+  	<article class="container">
+	<h4>Raspberry Pi - <a href="https://github.com/cuddlefish/RaspberryPI">github</a></h4>
+	<p>This repo contains 3 separate systems:</p>
+
+	<h4>1) webserver_pi - Tornado or Flask webserver</h4>
+	<p>A tornado app that serves data from other parts of the Raspberry pi. Also still has a crude front-end, and a tool to one-line text
+		(useful for command-line sql).</p>
+	<p>running directly on the raspberry pi (visit <a href="10.0.1.28">here</a>). Filter the graph data by adding a number to the
+	data returned, ie: <a href="http://10.0.1.28/graph/10">/graph/10</a> returns the 10 most-recent data-points.</p>
+
+	<h4>2) humidity_pi - Humidity and Temperature Logger</h4>
+	<p>The temp/humidity logger relies on a c program (from Adafruit) to read a DHT-22 sensor attached to the Raspberry Pi's GPIO pins.
+		Python writes the returned sensor data, either to an sqlite database, or to a csv one line at a time. Reads the sensor every
+		3 seconds, but takes a command-line option for how often to write (if set to write every hour, averages readings for that hour).
+	</p>
+
+	<h4>3) radio_pi - FM Radio transmitter</h4>
+	<p>Uses the pifm binary to transmit .wav audio over FM radio using the Rasperry Pi's GPIO pins.</p>
+	<p>Python code creates playlists from folders of music, can set shuffle or continuous play. For files that are not in .wav format,
+		it uses ffmpeg to convert, and streams this file (which is in fact written to dev/null!). The broadcast is currently set to
+		101.1 FM, but can only be heard a few meters away.
+	</p>
+	<hr/>
+
+	<h4>Generative_music - <a href="https://github.com/cuddlefish/generative-music/tree/feature/csv_readings">github</a></h4>
+	<p>Takes data and transforms it into music. Currently is barely a concept:</p>
+	<ul>
+		<li>takes data (numbers) and transforms them into a midi file (uses midiutil library).</li>
+		<li>midi files are transformed into .wav audio with fluidsynth and a soundfont</li>
+	</ul>
+	<p>Currently just creates a simple scale from a python xrange.</p>
+</article>
+
+  </div>
+</div>
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script src="/assets/main.js"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    </body>
+</html>
