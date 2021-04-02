@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ads Boomerang"
-description: A SaaS platform for self-serve advertising for small online stores.
+description: Rails SaaS for self-serve advertising for eCommerce.
 ---
 
 This repo contains 3 separate systems [[github](https://github.com/dtredger/ads_boomerang)]:
