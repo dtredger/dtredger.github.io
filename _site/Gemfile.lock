@@ -263,8 +263,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-email-protect
-  jekyll-feed
-  jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-target-blank

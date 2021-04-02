@@ -3,8 +3,8 @@
 title: Dylan Tredger
 description: ' '
 
-baseurl: /dtredger.github.io #name of GitHub repository
-url: #custom url to be used instead of GitHub repository
+baseurl: '/dtredger.github.io' #name of GitHub repository
+url: '' #custom url to be used instead of GitHub repository
 email: d.tredger+io@gmail.com
 
 

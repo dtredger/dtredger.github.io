@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/dtredger.github.io/sitemap.xml
+Sitemap: /dtredger.github.io/sitemap.xml

@@ -4,7 +4,7 @@ title: "Sailing Speed Calculator"
 description: "Calculations and graphs of sailing VMG vs TWA"
 ---
 
-{{ page.description }} [[github]()]
+{{ page.description }} 
 
 This repository is a **_Jupyter Notebook_** containing basic calculations of **Velocity Made Good (VMG)** for the most 
 efficient way to sail to a given destination.
