@@ -4,7 +4,7 @@ title: "Ads Boomerang"
 description: A SaaS platform for self-serve advertising for small online stores.
 ---
 
-This repo contains 3 separate systems [[github](https://github.com/dtredger/RaspberryPI)]:
+This repo contains 3 separate systems [[github](https://github.com/dtredger/ads_boomerang)]:
 
 **Ads Boomerang** was an idea for a self-service SaaS platform for small ecommerce stores that would deliver 
 advertising focused on driving more sales. This included a script to be inserted into the client's store, a dashboard to upload ads, an integration with an ad-inventory API, and reporting.

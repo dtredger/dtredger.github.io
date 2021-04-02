@@ -4,7 +4,8 @@ title: "ShowRoom"
 description: "A site for people to save their fashion likes"
 ---
 
-Showroom - [github](https://github.com/dtredger/showspace)
+_{{ page.description }}_ [[github](https://github.com/dtredger/showspace)]
+
 Showroom is a standard Rails 4.1 app that allows users to view fashion items in a grid interface and save them to a 
 "closet" for later. 
 
