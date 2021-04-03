@@ -2,9 +2,10 @@
 layout: post
 title: "Sailing Speed Calculator"
 description: "Calculations and graphs of sailing VMG vs TWA"
+image: "imoca_polar.jpg"
 ---
 
-{{ page.description }} [[github](https://github.com/dtredger/vmg-calculator/blob/master/vmg_calculator.ipynb)]
+_{{ page.description }}_ [[github](https://github.com/dtredger/vmg-calculator/blob/master/vmg_calculator.ipynb)]
 
 This repository is a **_Jupyter Notebook_** containing basic calculations of **Velocity Made Good (VMG)** for the most 
 efficient way to sail to a given destination.

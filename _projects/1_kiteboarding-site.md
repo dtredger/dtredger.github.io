@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "TBA Kiteboarding Site"
-description: "Website to find kiteboarding destinations"
+description: "Rails site to find Kiteboarding Destinations"
+image: "tba_kite_site.jpg"
 ---
 
 {{ page.description }} [[live](http://kite-site-app.herokuapp.com)]

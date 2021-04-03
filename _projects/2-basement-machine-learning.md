@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Basement Machine Learning"
-description: "A Pytorch Model of inside temperature in Winter"
+description: "Predicting Temperature with Pytorch"
+image: "jupyter_temp_humidity.jpg"
 ---
 
 _{{ page.description}}_
