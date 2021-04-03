@@ -11,7 +11,7 @@ published: true
         {% for project in site.projects %}
             {% if project.redirect %}
                 <div class="projectTile" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-url({{ project.image | prepend: '/assets/images/' }}"); background-size: cover;">
+url({{ project.image | prepend: '/assets/images/' }}); background-size: cover;">
                     <a href="{{ project.redirect }}" target="_blank">
                         <span style="color:#aaa"><h2>{{ project.title }}</h2>
                             <br/>
