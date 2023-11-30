@@ -18,24 +18,22 @@
 
 
         <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Sailing Speed Calculator | Dylan Tredger</title>
+<title>WeatherTF | Dylan Tredger</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Sailing Speed Calculator" />
+<meta property="og:title" content="WeatherTF" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Calculations and graphs of sailing VMG vs TWA" />
-<meta property="og:description" content="Calculations and graphs of sailing VMG vs TWA" />
-<link rel="canonical" href="http://localhost:4000/projects/3-sailing-vmg-calculator/" />
-<meta property="og:url" content="http://localhost:4000/projects/3-sailing-vmg-calculator/" />
+<meta name="description" content="Rails app to warn you of rain" />
+<meta property="og:description" content="Rails app to warn you of rain" />
+<link rel="canonical" href="http://localhost:4000/a/2014/weathertf/" />
+<meta property="og:url" content="http://localhost:4000/a/2014/weathertf/" />
 <meta property="og:site_name" content="Dylan Tredger" />
-<meta property="og:image" content="http://localhost:4000/imoca_polar.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-11-29T12:18:13-05:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/imoca_polar.jpg" />
-<meta property="twitter:title" content="Sailing Speed Calculator" />
+<meta property="article:published_time" content="2014-06-10T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="WeatherTF" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Calculations and graphs of sailing VMG vs TWA","headline":"Sailing Speed Calculator","dateModified":"2023-11-29T12:18:13-05:00","datePublished":"2023-11-29T12:18:13-05:00","@type":"BlogPosting","image":"http://localhost:4000/imoca_polar.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/3-sailing-vmg-calculator/"},"url":"http://localhost:4000/projects/3-sailing-vmg-calculator/","@context":"https://schema.org"}</script>
+{"description":"Rails app to warn you of rain","headline":"WeatherTF","dateModified":"2014-06-10T00:00:00-04:00","datePublished":"2014-06-10T00:00:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a/2014/weathertf/"},"url":"http://localhost:4000/a/2014/weathertf/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,32 +53,30 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">Sailing Speed Calculator</h1>
-<p class="meta"><small></small></p>
+                <h1 class="post-headline">WeatherTF</h1>
+<p class="meta"><small>June 10, 2014</small></p>
 
 
-	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/imoca_polar.jpg">
 
+<p><em>Rails app to warn you of rain.</em> [<a href="https://github.com/dtredger/weathertf" target="_blank" rel="noopener noreferrer">github</a>]</p>
 
-<p><em>Calculations and graphs of sailing VMG vs TWA</em> [<a href="https://github.com/dtredger/vmg-calculator/blob/master/vmg_calculator.ipynb" target="_blank" rel="noopener noreferrer">github</a>]</p>
+<p>WeatherTF is a simple rails app that sends you an SMS message with the forecast for your latitude/longitude every 
+morning . Lat/Lon is determined by browser geolocation (if available).</p>
 
-<p>This repository is a <strong><em>Jupyter Notebook</em></strong> containing basic calculations of <strong>Velocity Made Good (VMG)</strong> for the most 
-efficient way to sail to a given destination.</p>
+<p>Messages are actually just emails, which are sent to your carrier’s <code class="language-plaintext highlighter-rouge">SMS gateway</code>, which will deliver a plain-text 
+email as a message. Messages are sent at 8am (EST) every morning via resque-scheduler. Normal emails are sent using resque.</p>
 
-<p>The notebook also includes wind polars for a <strong>Figaro 3</strong> and generic <strong>2015 Imoca</strong> (from qtVlm), as well as a generic 
-wave polar (which shows percent of best performance achievable in a given sea-state).</p>
+<ul>
+  <li>Forecasts are via the Forecast.io. API.</li>
+  <li>Background images are from Ansel Adams’ <em>“National Parks”</em> series).</li>
+</ul>
 
-<p>While the polar data is boat-specific, I also calculate the required extra speed to make a decision to bear off 
-viable. For example:</p>
-<blockquote>
-  <p>increasing TWA from 40º to 45º will increase the distance sailed by over <strong>8%</strong>.</p>
-</blockquote>
-
-<p>So in the above case, unless bearing off will increase boatspeed by &gt; 8%, VMG will actually be worse, despite an 
-increase in speed.</p>
+<p><code class="language-plaintext highlighter-rouge">app not currently deployed anywhere</code></p>
 
 
 <!-- Comments only for posts -->
+
+    
 
 
             </article>
@@ -90,12 +86,12 @@ increase in speed.</p>
           <p class="copy">
             <small> © Dylan Tredger 2023
                     |
-                    Last updated on 29 November 2023
+                    Last updated on 30 November 2023
             </small>
           </p>
 
         <div class="rounded-social-buttons">
-<a title="" class="social-button email" itemprop="email" href="mailto:%64.%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
+<a title="" class="social-button email" itemprop="email" href="mailto:%64%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
 		<i class="far fa-envelope"></i>
 		</a><!---->
 <!--		<a title=""-->

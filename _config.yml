@@ -5,16 +5,16 @@ description: ' '
 
 baseurl:  #name of GitHub repository
 url: '' #custom url to be used instead of GitHub repository
-email: d.tredger+io@gmail.com
+email: dtredger+io@gmail.com
 site.github: dtredger.github
 
 highlighter: rouge
 markdown: kramdown
 
 # Pagination
-paginate: 4
-permalink: /blog/:year/:title/
-paginate_path: /blog/page:num/
+# paginate: 4
+permalink: /a/:year/:title/
+paginate_path: /a/page:num/
 
 # Social media links in footer
 facebook: "#"
@@ -46,6 +46,12 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+    sort_by: date
+    order:
+      - gps-analytics.md
+      - bird-friend.md
+      - kiteboarding-site.md
+      - projects/bird-friend.md
 
 sass:
   sass_dir: /assets/css/_sass

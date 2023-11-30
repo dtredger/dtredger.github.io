@@ -18,22 +18,24 @@
 
 
         <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Generative Music | Dylan Tredger</title>
+<title>GPS Analytics | Dylan Tredger</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Generative Music" />
+<meta property="og:title" content="GPS Analytics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Generate MIDIs from data" />
-<meta property="og:description" content="Generate MIDIs from data" />
-<link rel="canonical" href="http://localhost:4000/blog/2014/generative-music/" />
-<meta property="og:url" content="http://localhost:4000/blog/2014/generative-music/" />
+<meta name="description" content="Analysis of sailing GPS traces" />
+<meta property="og:description" content="Analysis of sailing GPS traces" />
+<link rel="canonical" href="http://localhost:4000/projects/gps-analytics/" />
+<meta property="og:url" content="http://localhost:4000/projects/gps-analytics/" />
 <meta property="og:site_name" content="Dylan Tredger" />
+<meta property="og:image" content="http://localhost:4000/gps-analytics.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2014-03-23T00:00:00-04:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Generative Music" />
+<meta property="article:published_time" content="2023-10-20T00:00:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/gps-analytics.png" />
+<meta property="twitter:title" content="GPS Analytics" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Generate MIDIs from data","headline":"Generative Music","dateModified":"2014-03-23T00:00:00-04:00","datePublished":"2014-03-23T00:00:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/generative-music/"},"url":"http://localhost:4000/blog/2014/generative-music/","@context":"https://schema.org"}</script>
+{"description":"Analysis of sailing GPS traces","headline":"GPS Analytics","dateModified":"2023-10-20T00:00:00-04:00","datePublished":"2023-10-20T00:00:00-04:00","@type":"BlogPosting","image":"http://localhost:4000/gps-analytics.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/gps-analytics/"},"url":"http://localhost:4000/projects/gps-analytics/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -53,39 +55,32 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">Generative Music</h1>
-<p class="meta"><small>March 23, 2014</small></p>
+                <h1 class="post-headline">GPS Analytics</h1>
+<p class="meta"><small>October 20, 2023</small></p>
 
 
+	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/gps-analytics.png">
 
-<p><em>Generate MIDIs from data.</em> [<a href="https://github.com/dtredger/generative-music" target="_blank" rel="noopener noreferrer">github</a>]</p>
 
-<p>This repo takes data and transforms it into midi files (uses midiutil library). MIDI files are then transformed into 
-<strong><em>.wav</em></strong> audio with fluidsynth and a soundfont.</p>
+<p><em>Analysis of sailing GPS traces</em> <a href="https://github.com/dtredger/gpx-analytics" target="_blank" rel="noopener noreferrer">github</a></p>
 
-<p>Currently the transformation of the input data is a basic linear transformation. In my case, the data is from temp 
-and humidity sensors running on a Raspberry pi. The <a href="/projects/raspberry-pi%20">RaspberryPi</a> repo shows an example of source data.</p>
+<p>This repository is a <strong><em>Jupyter Notebook</em></strong> that accepts a GPX file or CSV of GPS locations and maps and analyzes the result.</p>
 
-<p>That same <a href="/projects/raspberry-pi">repo</a> also has code to<br>
-create a hyperlocal FM radio station that can broadcast media files.</p>
+<p>The code analyzes tacking/gybing angles and infers a wind direction based on them. From that, we can calculate VMG.</p>
 
-<h2 id="playing-sounds">Playing Sounds:</h2>
+<p>The data is mapped, colour-coded by tack and whether upwind or downwind. Points on the map can be scrubbed through using the speed chart below.</p>
 
-<p>To play the music, you will need:</p>
-<ul>
-  <li>The ability to play MIDI files (it appears Mac OS can no longer play MIDI files by default. You’ll need 
-<strong><em>FluidSynth</em></strong> (you can brew install fluid-synth.</li>
-  <li>A <strong><em>Sound Font</em></strong> to actually play the MIDI file (you can chose which instrument). I’ve included an open-source 
-piano 
-in the repo: there are tons of instrument options out there.</li>
-</ul>
+<p>In addition, we can generate:</p>
 
-<p>The most up-to-date code is in the <code class="language-plaintext highlighter-rouge">feature/csv_readings</code> branch.</p>
+<h5 id="violin-plot">Violin Plot</h5>
+<p>a chart of the angles sailed between each maneuver.
+ This allows comparing tacking angles, but also different multiple tacks or gybes on the same leg</p>
+
+<h5 id="polar-plot">Polar Plot</h5>
+<p>Shows avg and 90th percentile speed at every given compass angle. The data can also be filtered (in the event the wind shifts).</p>
 
 
 <!-- Comments only for posts -->
-
-    
 
 
             </article>
@@ -95,12 +90,12 @@ in the repo: there are tons of instrument options out there.</li>
           <p class="copy">
             <small> © Dylan Tredger 2023
                     |
-                    Last updated on 29 November 2023
+                    Last updated on 30 November 2023
             </small>
           </p>
 
         <div class="rounded-social-buttons">
-<a title="" class="social-button email" itemprop="email" href="mailto:%64.%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
+<a title="" class="social-button email" itemprop="email" href="mailto:%64%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
 		<i class="far fa-envelope"></i>
 		</a><!---->
 <!--		<a title=""-->

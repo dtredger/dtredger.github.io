@@ -18,22 +18,22 @@
 
 
         <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>WeatherTF | Dylan Tredger</title>
+<title>Ads Boomerang | Dylan Tredger</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="WeatherTF" />
+<meta property="og:title" content="Ads Boomerang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Rails app to warn you of rain" />
-<meta property="og:description" content="Rails app to warn you of rain" />
-<link rel="canonical" href="http://localhost:4000/blog/2014/weathertf/" />
-<meta property="og:url" content="http://localhost:4000/blog/2014/weathertf/" />
+<meta name="description" content="Rails SaaS for self-serve advertising for eCommerce." />
+<meta property="og:description" content="Rails SaaS for self-serve advertising for eCommerce." />
+<link rel="canonical" href="http://localhost:4000/a/2017/ads-boomerang/" />
+<meta property="og:url" content="http://localhost:4000/a/2017/ads-boomerang/" />
 <meta property="og:site_name" content="Dylan Tredger" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2014-06-10T00:00:00-04:00" />
+<meta property="article:published_time" content="2017-04-23T00:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="WeatherTF" />
+<meta property="twitter:title" content="Ads Boomerang" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Rails app to warn you of rain","headline":"WeatherTF","dateModified":"2014-06-10T00:00:00-04:00","datePublished":"2014-06-10T00:00:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/weathertf/"},"url":"http://localhost:4000/blog/2014/weathertf/","@context":"https://schema.org"}</script>
+{"description":"Rails SaaS for self-serve advertising for eCommerce.","headline":"Ads Boomerang","dateModified":"2017-04-23T00:00:00-04:00","datePublished":"2017-04-23T00:00:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a/2017/ads-boomerang/"},"url":"http://localhost:4000/a/2017/ads-boomerang/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -53,25 +53,48 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">WeatherTF</h1>
-<p class="meta"><small>June 10, 2014</small></p>
+                <h1 class="post-headline">Ads Boomerang</h1>
+<p class="meta"><small>April 23, 2017</small></p>
 
 
 
-<p><em>Rails app to warn you of rain.</em> [<a href="https://github.com/dtredger/weathertf" target="_blank" rel="noopener noreferrer">github</a>]</p>
+<p>This repo contains 3 separate systems [<a href="https://github.com/dtredger/ads_boomerang" target="_blank" rel="noopener noreferrer">github</a>]:</p>
 
-<p>WeatherTF is a simple rails app that sends you an SMS message with the forecast for your latitude/longitude every 
-morning . Lat/Lon is determined by browser geolocation (if available).</p>
+<p><strong>Ads Boomerang</strong> was an idea for a self-service SaaS platform for small ecommerce stores that would deliver 
+advertising focused on driving more sales. This included a script to be inserted into the client’s store, a dashboard to upload ads, an integration with an ad-inventory API, and reporting.</p>
 
-<p>Messages are actually just emails, which are sent to your carrier’s <code class="language-plaintext highlighter-rouge">SMS gateway</code>, which will deliver a plain-text 
-email as a message. Messages are sent at 8am (EST) every morning via resque-scheduler. Normal emails are sent using resque.</p>
+<hr>
 
+<h2 id="technical-aspects">Technical Aspects</h2>
+
+<p>The system used:</p>
 <ul>
-  <li>Forecasts are via the Forecast.io. API.</li>
-  <li>Background images are from Ansel Adams’ <em>“National Parks”</em> series).</li>
+  <li>Rails 5</li>
+  <li>Postgres and Redis for storage and queues</li>
+  <li>Memcached for caching</li>
+  <li>payola-payments and Stripe for handling payments</li>
+  <li>Beeswax for buying accessing Ad Inventory</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">app not currently deployed anywhere</code></p>
+<h2 id="what-went-well">What went well</h2>
+<p>From a technical perspective, most of the bits worked as expected; specifically:</p>
+
+<ul>
+  <li>Integration with Shopify made setup easy</li>
+  <li>Integration with Beeswax PaaS provided the ability to buy ads on a variety of ad exchanges</li>
+  <li>Dashboard accepted uploads for most standard image formats (300x250, 728x90, 160x600, etc.)</li>
+</ul>
+
+<h2 id="why-didnt-it-work">Why didn’t it work?</h2>
+<p>The main issue is that there was too much support and explanation required versus the target client’s budget:</p>
+
+<ul>
+  <li>most small store owners weren’t very tech-savvy, so had to be explained the benefits of retargeting.</li>
+  <li>Store owners needed ads designed.</li>
+  <li>some store owners were skeptical of online ads generally: many small sellers didn’t want to be the type of business that advertised.</li>
+  <li>Retargeted ads are cheap, but limited to a site’s existing pool of users. This capped the amount that a given client could spend on retargeted ads.</li>
+  <li>Non-retargeted ads are totally ineffective without huge amounts of data. Given the amount of fraud/non-viewable ad inventory on most ad-exchanges, buying without extensive data brings zero return.</li>
+</ul>
 
 
 <!-- Comments only for posts -->
@@ -86,12 +109,12 @@ email as a message. Messages are sent at 8am (EST) every morning via resque-sche
           <p class="copy">
             <small> © Dylan Tredger 2023
                     |
-                    Last updated on 29 November 2023
+                    Last updated on 30 November 2023
             </small>
           </p>
 
         <div class="rounded-social-buttons">
-<a title="" class="social-button email" itemprop="email" href="mailto:%64.%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
+<a title="" class="social-button email" itemprop="email" href="mailto:%64%74%72%65%64%67%65%72+%69%6F@%67%6D%61%69%6C.%63%6F%6D" target="_blank">
 		<i class="far fa-envelope"></i>
 		</a><!---->
 <!--		<a title=""-->
