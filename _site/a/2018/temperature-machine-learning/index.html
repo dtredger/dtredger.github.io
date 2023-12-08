@@ -17,25 +17,25 @@
 </div>
 
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Sailing Speed Calculator | Dylan Tredger</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Sailing Speed Calculator" />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Basement Machine Learning | Dylan Tredger</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Basement Machine Learning" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Calculations and graphs of sailing VMG vs TWA" />
-<meta property="og:description" content="Calculations and graphs of sailing VMG vs TWA" />
-<link rel="canonical" href="http://localhost:4000/projects/sailing-vmg-calculator/" />
-<meta property="og:url" content="http://localhost:4000/projects/sailing-vmg-calculator/" />
+<meta name="description" content="Predicting Temperature with Pytorch" />
+<meta property="og:description" content="Predicting Temperature with Pytorch" />
+<link rel="canonical" href="http://localhost:4000/a/2018/temperature-machine-learning/" />
+<meta property="og:url" content="http://localhost:4000/a/2018/temperature-machine-learning/" />
 <meta property="og:site_name" content="Dylan Tredger" />
-<meta property="og:image" content="http://localhost:4000/imoca_polar.jpg" />
+<meta property="og:image" content="http://localhost:4000/jupyter_temp_humidity.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-11-30T00:44:36-05:00" />
+<meta property="article:published_time" content="2018-01-01T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/imoca_polar.jpg" />
-<meta property="twitter:title" content="Sailing Speed Calculator" />
+<meta property="twitter:image" content="http://localhost:4000/jupyter_temp_humidity.jpg" />
+<meta property="twitter:title" content="Basement Machine Learning" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Calculations and graphs of sailing VMG vs TWA","headline":"Sailing Speed Calculator","dateModified":"2023-11-30T00:44:36-05:00","datePublished":"2023-11-30T00:44:36-05:00","@type":"BlogPosting","image":"http://localhost:4000/imoca_polar.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/sailing-vmg-calculator/"},"url":"http://localhost:4000/projects/sailing-vmg-calculator/","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-01-01T00:00:00-05:00","datePublished":"2018-01-01T00:00:00-05:00","description":"Predicting Temperature with Pytorch","headline":"Basement Machine Learning","image":"http://localhost:4000/jupyter_temp_humidity.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a/2018/temperature-machine-learning/"},"url":"http://localhost:4000/a/2018/temperature-machine-learning/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,32 +55,25 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">Sailing Speed Calculator</h1>
-<p class="meta"><small></small></p>
+                <h1 class="post-headline">Basement Machine Learning</h1>
+<p class="meta"><small>January 01, 2018</small></p>
 
 
-	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/imoca_polar.jpg">
+	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/jupyter_temp_humidity.jpg">
 
 
-<p><em>Calculations and graphs of sailing VMG vs TWA</em> [<a href="https://github.com/dtredger/vmg-calculator/blob/master/vmg_calculator.ipynb" target="_blank" rel="noopener noreferrer">github</a>]</p>
+<p><em>Predicting Temperature with Pytorch</em></p>
 
-<p>This repository is a <strong><em>Jupyter Notebook</em></strong> containing basic calculations of <strong>Velocity Made Good (VMG)</strong> for the most
-efficient way to sail to a given destination.</p>
+<p>This Repo takes a month of temp and humidity sensor readings and attempts to create a model to predict future temperatures. The data was collected from sensors running on a Raspberry Pi, with code for that system
+<a href="/projects/raspberry-pi">available here</a>.</p>
 
-<p>The notebook also includes wind polars for a <strong>Figaro 3</strong> and generic <strong>2015 Imoca</strong> (from qtVlm), as well as a generic
-wave polar (which shows percent of best performance achievable in a given sea-state).</p>
-
-<p>While the polar data is boat-specific, I also calculate the required extra speed to make a decision to bear off
-viable. For example:</p>
-<blockquote>
-  <p>increasing TWA from 40º to 45º will increase the distance sailed by over <strong>8%</strong>.</p>
-</blockquote>
-
-<p>So in the above case, unless bearing off will increase boatspeed by &gt; 8%, VMG will actually be worse, despite an
-increase in speed.</p>
+<p>The model is written with <strong><em>Pytorch</em></strong> as a <strong><em>Jupyter Notebook</em></strong>, so there is extensive documentation about how
+it works with the code.</p>
 
 
 <!-- Comments only for posts -->
+
+    
 
 
             </article>

@@ -17,25 +17,25 @@
 </div>
 
 
-        <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Basement Machine Learning | Dylan Tredger</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Basement Machine Learning" />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Raspberry Pi | Dylan Tredger</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Raspberry Pi" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Predicting Temperature with Pytorch" />
-<meta property="og:description" content="Predicting Temperature with Pytorch" />
-<link rel="canonical" href="http://localhost:4000/projects/basement-machine-learning/" />
-<meta property="og:url" content="http://localhost:4000/projects/basement-machine-learning/" />
+<meta name="description" content="3 Raspberry Pi Repos (Webserver, Sensors, and FM Radio)" />
+<meta property="og:description" content="3 Raspberry Pi Repos (Webserver, Sensors, and FM Radio)" />
+<link rel="canonical" href="http://localhost:4000/a/2019/raspberry-pi/" />
+<meta property="og:url" content="http://localhost:4000/a/2019/raspberry-pi/" />
 <meta property="og:site_name" content="Dylan Tredger" />
-<meta property="og:image" content="http://localhost:4000/jupyter_temp_humidity.jpg" />
+<meta property="og:image" content="http://localhost:4000/raspberry_pi_graph.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-11-30T00:44:36-05:00" />
+<meta property="article:published_time" content="2019-06-01T00:00:00-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/jupyter_temp_humidity.jpg" />
-<meta property="twitter:title" content="Basement Machine Learning" />
+<meta property="twitter:image" content="http://localhost:4000/raspberry_pi_graph.jpg" />
+<meta property="twitter:title" content="Raspberry Pi" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"description":"Predicting Temperature with Pytorch","headline":"Basement Machine Learning","dateModified":"2023-11-30T00:44:36-05:00","datePublished":"2023-11-30T00:44:36-05:00","@type":"BlogPosting","image":"http://localhost:4000/jupyter_temp_humidity.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/basement-machine-learning/"},"url":"http://localhost:4000/projects/basement-machine-learning/","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-06-01T00:00:00-04:00","datePublished":"2019-06-01T00:00:00-04:00","description":"3 Raspberry Pi Repos (Webserver, Sensors, and FM Radio)","headline":"Raspberry Pi","image":"http://localhost:4000/raspberry_pi_graph.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a/2019/raspberry-pi/"},"url":"http://localhost:4000/a/2019/raspberry-pi/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,23 +55,35 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">Basement Machine Learning</h1>
-<p class="meta"><small></small></p>
+                <h1 class="post-headline">Raspberry Pi</h1>
+<p class="meta"><small>June 01, 2019</small></p>
 
 
-	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/jupyter_temp_humidity.jpg">
+	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/raspberry_pi_graph.jpg">
 
 
-<p><em>Predicting Temperature with Pytorch</em></p>
+<p><em>3 Raspberry Pi Repos (Webserver, Sensors, and FM Radio)</em> [<a href="https://github.com/dtredger/RaspberryPI" target="_blank" rel="noopener noreferrer">github</a>]</p>
 
-<p>This Repo takes a month of temp and humidity sensor readings and attempts to create a model to predict future temperatures. The data was collected from sensors running on a Raspberry Pi, with code for that system
-<a href="/projects/raspberry-pi">available here</a>.</p>
+<p>1) <strong>webserver_pi</strong></p>
 
-<p>The model is written with <strong><em>Pytorch</em></strong> as a <strong><em>Jupyter Notebook</em></strong>, so there is extensive documentation about how
-it works with the code.</p>
+<p>Tornado or Flask webserver
+   A tornado app that serves data from other parts of the Raspberry pi. Also still has a crude front-end, and a tool to one-line text (useful for command-line sql). running directly on the raspberry pi (visit here). Filter the graph data by adding a number to the data returned, ie: /graph/10 returns the 10 most-recent data-points.</p>
+
+<p>2) <strong>humidity_pi</strong></p>
+
+<p>Humidity and Temperature Logger
+   The temp/humidity logger relies on a c program (from Adafruit) to read a DHT-22 sensor attached to the Raspberry Pi’s GPIO pins. Python writes the returned sensor data, either to an sqlite database, or to a csv one line at a time. Reads the sensor every 3 seconds, but takes a command-line option for how often to write (if set to write every hour, averages readings for that hour).</p>
+
+<p>3) <strong>radio_pi</strong></p>
+
+<p>FM Radio transmitter. Uses the pifm binary to transmit .wav audio over FM radio using the Rasperry Pi’s GPIO pins.</p>
+
+<p>Python code creates playlists from folders of music, can set shuffle or continuous play. For files that are not in .wav format, it uses ffmpeg to convert, and streams this file (which is in fact written to dev/null!). The broadcast is currently set to 101.1 FM, but can only be heard a few meters away.</p>
 
 
 <!-- Comments only for posts -->
+
+    
 
 
             </article>

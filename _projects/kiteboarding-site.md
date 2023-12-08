@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "TBA Kiteboarding Site"
-description: "Rails site to find Kiteboarding Destinations"
+title: "Kiteboarding Site"
+description: "Ruby on Rails app to find Kiteboarding Destinations"
 image: "tba_kite_site.jpg"
 ---
 

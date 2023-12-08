@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "GPS Analytics"
-description: "Analysis of sailing GPS traces"
+description: "Analysis of GPS data with Jupyter"
 image: "gps-analytics.png"
-date: 2023-10-20
 ---
 
 _{{ page.description }}_ [github](https://github.com/dtredger/gpx-analytics)
