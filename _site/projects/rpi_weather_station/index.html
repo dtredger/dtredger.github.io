@@ -18,22 +18,24 @@
 
 
         <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Generative Music | Dylan Tredger</title>
+<title>Raspberry Pi Weather Station | Dylan Tredger</title>
 <meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Generative Music" />
+<meta property="og:title" content="Raspberry Pi Weather Station" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Generate MIDIs from data" />
-<meta property="og:description" content="Generate MIDIs from data" />
-<link rel="canonical" href="http://localhost:4000/a/2014/generative-music/" />
-<meta property="og:url" content="http://localhost:4000/a/2014/generative-music/" />
+<meta name="description" content="Visualize weather data received from sensors over Radio" />
+<meta property="og:description" content="Visualize weather data received from sensors over Radio" />
+<link rel="canonical" href="http://localhost:4000/projects/rpi_weather_station/" />
+<meta property="og:url" content="http://localhost:4000/projects/rpi_weather_station/" />
 <meta property="og:site_name" content="Dylan Tredger" />
+<meta property="og:image" content="http://localhost:4000/weather_station_hardware.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2014-03-23T00:00:00-04:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Generative Music" />
+<meta property="article:published_time" content="2023-12-08T01:41:39-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/weather_station_hardware.jpg" />
+<meta property="twitter:title" content="Raspberry Pi Weather Station" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2014-03-23T00:00:00-04:00","datePublished":"2014-03-23T00:00:00-04:00","description":"Generate MIDIs from data","headline":"Generative Music","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a/2014/generative-music/"},"url":"http://localhost:4000/a/2014/generative-music/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-08T01:41:39-05:00","datePublished":"2023-12-08T01:41:39-05:00","description":"Visualize weather data received from sensors over Radio","headline":"Raspberry Pi Weather Station","image":"http://localhost:4000/weather_station_hardware.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/rpi_weather_station/"},"url":"http://localhost:4000/projects/rpi_weather_station/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -53,39 +55,30 @@
     <body>
         <main>
             <article>
-                <h1 class="post-headline">Generative Music</h1>
-<p class="meta"><small>March 23, 2014</small></p>
+                <h1 class="post-headline">Raspberry Pi Weather Station</h1>
+<p class="meta"><small></small></p>
 
 
+	<img class="right" width="40%" style="padding: 5px;" src="http://localhost:4000/assets/images/weather_station_hardware.jpg">
 
-<p><em>Generate MIDIs from data.</em> [<a href="https://github.com/dtredger/generative-music" target="_blank" rel="noopener noreferrer">github</a>]</p>
 
-<p>This repo takes data and transforms it into midi files (uses midiutil library). MIDI files are then transformed into 
-<strong><em>.wav</em></strong> audio with fluidsynth and a soundfont.</p>
+<p><em>Visualize weather data received from sensors over Radio</em> [<a href="https://github.com/dtredger/SDL_Pi_WeatherSense" target="_blank" rel="noopener noreferrer">github</a>]</p>
 
-<p>Currently the transformation of the input data is a basic linear transformation. In my case, the data is from temp 
-and humidity sensors running on a Raspberry pi. The <a href="/projects/raspberry-pi%20">RaspberryPi</a> repo shows an example of source data.</p>
+<p>This repository is for recording and visualizing data from a Switchdoc Labs WeatherSense weather station, which includes two sensor units, with Temperature, Humidity, Windspeed, Rainfall, and Sunlight data.</p>
 
-<p>That same <a href="/projects/raspberry-pi">repo</a> also has code to<br>
-create a hyperlocal FM radio station that can broadcast media files.</p>
+<p>The sensors transmit in the ISM radio band, so a radio receiver attached to a Raspberry Pi logs the data, and it is graphed with a Grafana dashboard. The code in this repository starts 4 services, responsible for:</p>
 
-<h2 id="playing-sounds">Playing Sounds:</h2>
-
-<p>To play the music, you will need:</p>
 <ul>
-  <li>The ability to play MIDI files (it appears Mac OS can no longer play MIDI files by default. You’ll need 
-<strong><em>FluidSynth</em></strong> (you can brew install fluid-synth.</li>
-  <li>A <strong><em>Sound Font</em></strong> to actually play the MIDI file (you can chose which instrument). I’ve included an open-source 
-piano 
-in the repo: there are tons of instrument options out there.</li>
+  <li>Listening for radio transmissions (and deduplicating)</li>
+  <li>Logging the received data to an InfluxDB database;</li>
+  <li>Running a Grafana dashboard</li>
+  <li>Serving with Nginx</li>
 </ul>
 
-<p>The most up-to-date code is in the <code class="language-plaintext highlighter-rouge">feature/csv_readings</code> branch.</p>
+<p>This allows you to put the data onto a website accessible on your local network (or potentially the internet, if you want to set up port forwarding).</p>
 
 
 <!-- Comments only for posts -->
-
-    
 
 
             </article>

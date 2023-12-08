@@ -3,6 +3,7 @@ layout: post
 title: "GPS Analytics"
 description: "Analysis of GPS data with Jupyter"
 image: "gps-analytics.png"
+order: 2
 ---
 
 _{{ page.description }}_ [github](https://github.com/dtredger/gpx-analytics)

@@ -4,6 +4,7 @@ title: "Bird Friend"
 description: Animatronic Birds with Python
 image: "crow-friend.webp"
 image_2: "yellow-bird.webp"
+order: 4
 ---
 
 _{{ page.description }}_ [[github](https://github.com/dtredger/bird_friend)]

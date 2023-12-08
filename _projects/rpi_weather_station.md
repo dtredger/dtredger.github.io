@@ -3,6 +3,7 @@ layout: post
 title: "Raspberry Pi Weather Station"
 description: Visualize weather data received from sensors over Radio  
 image: "weather_station_hardware.jpg"
+order: 3
 ---
 
 _{{ page.description }}_ [[github](https://github.com/dtredger/SDL_Pi_WeatherSense)]
